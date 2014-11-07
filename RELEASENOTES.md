@@ -21,12 +21,13 @@ This extension requires the following:
 
 - All CA APM versions should work.  There are no version dependencies.
 
-- [CA APM EPAgent v9.7.1](http://some.link) or later (with REST interface).  The EPAgent can be running on any machine with an accessible HTTP listener.
+- CA APM EPAgent v9.7.1 or later (with REST interface).  The EPAgent can be running on any machine with an accessible HTTP listener.
 
-- The collector program is self-contained except for a dependency on the
-[Java MongoDB Driver](http://docs.mongodb.org/ecosystem/drivers/java/).  
-All versions supporting [serverStatus](http://docs.mongodb.org/manual/reference/command/serverStatus/) should work.  The Collector was built, tested, and certified against MongoDB v2.6.
-
+- The ca-apm-fieldpack-mongodb program is self-contained except for a dependency on the
+   - [Java MongoDB Driver](http://docs.mongodb.org/ecosystem/drivers/java/)
+   - [google-gson](https://code.google.com/p/google-gson/)
+  
+- MongoDB versions supporting [serverStatus](http://docs.mongodb.org/manual/reference/command/serverStatus/) should work.  The Collector was built, tested, and certified against MongoDB v2.6.
  
 ## <a name="changes"></a>CHANGELOG
 
@@ -40,7 +41,8 @@ Please review the **CHANGELOG.md** file in this repository
 With an appropriate property file and the mongo client jar, run the
 program as follows:
 
-`java -cp MongoAPMCollector.jar:mongo-java-driver.jar com.ca.apm.mongo.Collector <your-propfile>.props`
+`java -cp ca-apm-fieldpack-mongodb-1.0.jar:mongo-java-driver-2.12.3.jar:gson-2.2.4.jar
+com.ca.apm.mongo.Collector <your-propfile>.props`
 
 ### Example Dashboard Setup
 
@@ -67,14 +69,14 @@ build would be:
 `mvn clean package`
 
 This will resolve external dependencies, build source and test
-classes, run tests with code coverage and yield an output zip. The file
-*README.md.forzip* gets packaged with the zip to explain program
-usage.
+classes, run tests with code coverage and yield an output zip. 
 
 ### External Dependencies
 
-The only external dependency for the implementation is the maven
-client driver.
+The only external dependency for the implementation is the maveThe external dependencies for the implementation are:
+
+* [Java MongoDB Driver](http://docs.mongodb.org/ecosystem/drivers/java/).
+* [google-gson](https://code.google.com/p/google-gson/)
 
 The tests depend on:
 
@@ -118,15 +120,14 @@ be viewed in `./target/site/jacoco-ut/index.html`
 ### References
 
 * [MongoDB Manual](http://docs.mongodb.org/manual/)
-* [Metric Producing Command](http://docs.mongodb.org/manual/reference/command/serverStatus)
-* [Java Client](http://api.mongodb.org/java/2.12)
-* [SSL Configuration](http://docs.mongodb.org/manual/tutorial/configure-ssl)
-* [Authentication](http://docs.mongodb.org/manual/tutorial/enable-authentication)
-* [LDAP Configuration](http://docs.mongodb.org/manual/tutorial/configure-ldap-sasl-openldap)
-* [CentOS Setup for Testing](http://www.itmanx.com/kb/centos6/install-openldap-phpldapadmin)
-* [Mongo Best Practices](https://www.mongodb.com/partners/partner-program/technology/certification/monitoring-best-practices)
+  * [Mongo Monitoring Best Practices](https://www.mongodb.com/partners/partner-program/technology/certification/m$
+  * [Metric Producing Command](http://docs.mongodb.org/manual/reference/command/serverStatus)
+  * [Java Client](http://api.mongodb.org/java/2.12)
+  * [SSL Configuration](http://docs.mongodb.org/manual/tutorial/configure-ssl)
+  * [Authentication](http://docs.mongodb.org/manual/tutorial/enable-authentication)
+  * [LDAP Configuration](http://docs.mongodb.org/manual/tutorial/configure-ldap-sasl-openldap)
+    * [CentOS Setup for Testing](http://www.itmanx.com/kb/centos6/install-openldap-phpldapadmin)
 
 ## <a name="license"></a>LICENSE
 
 Please review the **LICENSE** file in this repository.
-

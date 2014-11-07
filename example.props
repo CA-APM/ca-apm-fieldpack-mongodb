@@ -1,0 +1,79 @@
+# Name or IP address of the mongo server host.
+# If your MongoDB configuration is multi-node (e.g., clustered, sharded)
+# you can specify any of the participating nodes.  The 
+# ca-apm-fieldpack-mongodb collector will discover all of the other nodes 
+# and metrics will be reported for each mongo server.
+# This parameter is required.  There is no default value.
+mongo.hostname=localhost
+
+# Port where mongo server is listening.  This parameter is required.
+# There is no default value.
+mongo.port=27017
+
+# Configuration for SSL mongo connection
+#mongo.usessl=true
+#javax.net.ssl.trustStore=<path to your trust store>
+#javax.net.ssl.trustStorePassword=<password of your trust store>
+
+# Mongo authentication type.  Must be one of:
+# - none: no authentication
+# - basic: use mongo basic authentication
+# - plainsasl: use plainsasl (e.g., LDAP) authentication
+# - kerberos:
+#
+# This parameter is required.  There is no default value.
+mongo.auth=none
+
+# The Mongo user name.  This parameter is required for all authentication
+# types other than "none"
+#mongo.user=<your-mongo-user>
+
+# The mongo password.  This parameter is required for "basic" and "plainsasl"
+# authentication.
+#mongo.pw=<your-mongo-password>
+
+# Data collection interval in seconds.  Value should be greater than 0.
+# If not, the ca-apm-fieldpack-mongodb collector will run only once and 
+# then the program will exit.
+# Note that smaller interval values will result in increased load on
+# your mongo server(s).
+# This parameter is required.  There is no default value.
+mongo.interval.seconds=60
+
+# Hostname or IP address of APM API server.  This parameter is required.
+# There is no default value.
+apm.apihost=localhost
+# Port for APM API server.  This parameter is required.
+# There is no default value.
+apm.apiport=8080
+
+#Logging properties
+#This program uses JDK Logging
+#Any JDK logging properties can be placed in this file.
+#Please review Java documentation for more information
+#http://docs.oracle.com/javase/7/docs/api/java/util/logging/package-summary.html
+
+#Types of handlers to use
+handlers=java.util.logging.FileHandler, java.util.logging.ConsoleHandler
+.level=FINEST
+
+#documentation for FileHandler
+#NOTE:If you specify a directory, that folder must exist before logging can occur
+#JDK logging does not dynamically create directories.
+#java.util.logging.FileHandler.pattern = ./Logs/log%g.%u.txt
+
+
+java.util.logging.ConsoleHandler.level=INFO
+java.util.logging.FileHandler.level=FINEST
+
+#formatter to use
+#console formatter defaults to simple
+#file formatter defaults to xml
+java.util.logging.FileHandler.formatter=java.util.logging.SimpleFormatter
+
+#size of each log file in bytes
+java.util.logging.FileHandler.limit=10000
+
+#max number of rolling log files
+java.util.logging.FileHandler.count=10
+java.util.logging.FileHandler.append=true
