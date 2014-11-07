@@ -134,4 +134,5 @@ In order to decrease the back and forth an issues and help us get to the bottom 
 CA APM is made possible by a strong community of developers and system administrators. If you have
   any questions or if you would like to get involved in the CA APM community you can check out:
 
-* [CA APM Community](https://communities.ca.com/community/ca-apm) 
+* [CA APM Community](https://communities.ca.com/community/ca-apm).  Core APM community for general discussion 
+* [CA APM Dev Community](https://communities.ca.com/community/ca-apm/apm-dev).  Developer community for dev-specific tools and dialog.
