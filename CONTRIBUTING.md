@@ -1,4 +1,4 @@
-# Contributing to CA Release Automation
+# Contributing to CA APM
 
 We are glad you want to contribute to CA APM!
 
