@@ -21,9 +21,9 @@ This extension requires the following:
 
 - All CA APM versions should work.  There are no version dependencies.
 
-- CA APM EPAgent v9.7.1 or later (with REST interface).  The EPAgent can be running on any machine with an accessible HTTP listener.
+- CA APM EPAgent v9.7.1 or later (with REST interface).  The EPAgent can be running on any machine (provided the configured HTTP port is reachable by the collector).
 
-- The ca-apm-fieldpack-mongodb program is self-contained except for a dependency on the
+- The ca-apm-fieldpack-mongodb program is self-contained except for dependencies on
    - [Java MongoDB Driver](http://docs.mongodb.org/ecosystem/drivers/java/)
    - [google-gson](https://code.google.com/p/google-gson/)
   
@@ -35,6 +35,7 @@ Please review the **CHANGELOG.md** file in this repository
 
 ## <a name="install"></a>INSTALLATION
 
+Unzip ca-apm-fieldpack-mongodb-1.0.zip into a directory with suitable read/write access. [Configure](#config) your setup.
 
 ### Running the Collector
 
@@ -54,7 +55,7 @@ and a calculator on a CA APM Enterprise Manager. To install:
 
 ## <a name="config"></a>CONFIGURATION
 
-All configuration of the Collector program is via property file -- *examples.props* for details.
+All configuration of the Collector program is via property file -- **example.props** for details.
 
 ##<a name="dev"></a>CONTRIBUTING AND DEVELOPMENT
 
@@ -64,7 +65,7 @@ Development details follow:
 
 ### Builds
 
-The repo includes a *pom.xml* for building via maven. A typical maven
+The repo includes a **pom.xml** for building via maven. A typical maven
 build would be:
 `mvn clean package`
 
@@ -73,7 +74,7 @@ classes, run tests with code coverage and yield an output zip.
 
 ### External Dependencies
 
-The only external dependency for the implementation is the maveThe external dependencies for the implementation are:
+The external dependencies for the implementation are:
 
 * [Java MongoDB Driver](http://docs.mongodb.org/ecosystem/drivers/java/).
 * [google-gson](https://code.google.com/p/google-gson/)
@@ -82,7 +83,7 @@ The tests depend on:
 
 * the TestNG framework
 * an [embedded mongo library](https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo)
-* a json parser
+* a json parser [javax.json](https://jsonp.java.net/)
 * a [mock http server](https://github.com/jadler-mocking/jadler/wiki)
 
 All dependencies are resolved by maven.
