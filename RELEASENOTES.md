@@ -38,7 +38,7 @@ Please review the **CHANGELOG.md** file in this repository
 
 ### Running the Collector
 
-With an appropriate property file and the mongo client jar, run the
+With an appropriate property file and the dependent jars, run the
 program as follows:
 
 `java -cp ca-apm-fieldpack-mongodb-1.0.jar:mongo-java-driver-2.12.3.jar:gson-2.2.4.jar
