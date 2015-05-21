@@ -120,14 +120,14 @@ be viewed in `./target/site/jacoco-ut/index.html`
 
 ### References
 
-* [MongoDB Manual](http://docs.mongodb.org/manual/)
+  * [MongoDB Manual](http://docs.mongodb.org/manual/)
   * [Mongo Monitoring Best Practices](https://www.mongodb.com/partners/partner-program/technology/certification/m$
   * [Metric Producing Command](http://docs.mongodb.org/manual/reference/command/serverStatus)
   * [Java Client](http://api.mongodb.org/java/2.12)
   * [SSL Configuration](http://docs.mongodb.org/manual/tutorial/configure-ssl)
   * [Authentication](http://docs.mongodb.org/manual/tutorial/enable-authentication)
   * [LDAP Configuration](http://docs.mongodb.org/manual/tutorial/configure-ldap-sasl-openldap)
-    * [CentOS Setup for Testing](http://www.itmanx.com/kb/centos6/install-openldap-phpldapadmin)
+  * [CentOS Setup for Testing](http://www.itmanx.com/kb/centos6/install-openldap-phpldapadmin)
 
 ## <a name="license"></a>LICENSE
 
