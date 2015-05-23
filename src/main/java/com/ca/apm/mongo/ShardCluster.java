@@ -209,7 +209,11 @@ public final class ShardCluster extends Topology {
 
         final BasicBSONObject sharding =
             (BasicBSONObject) parsed.get("sharding");
-        String cfgServerString = sharding.getString("configDB");
+        String cfgServerString; 
+        if (sharding != null)
+            cfgServerString = sharding.getString("configDB");
+        else
+            cfgServerString = (String) parsed.get("configDB");
         addCommaSeparatedHosts(cfgServers, cfgServerString);
 
         return cfgServers;
