@@ -1,5 +1,13 @@
 
-# README
+# CA APM MONGODB COLLECTOR
+
+# Description
+The CA APM MongoDB Collector (hereafter Collector) extracts performance metrics from one or more MongoDB instances and send them to an APM Enterprise Manager via EPAgent.  It utilizes the RESTful API for EPAgent.
+
+## Short Description
+
+The CA APM MongoDB Collector monitors one or more MongoDB instances.
+
 
 ## RELEASENOTES
 
@@ -7,13 +15,9 @@ Please review the
 **RELEASENOTES.md** 
 file in this repository for a detailed overview, including installation instructions.
 
-### DOCUMENTATION
-
-Projects are designed to be self documenting, meaning that installation and configuration instructions are found inside the projects themselves (as committed assets).  Generally a project overview (including description, sample screenshots, etc.) can be found on the project wiki page at `http://github.com/ca-apm/<repo_name>/wiki`. 
-
 Here are some additional links to CA APM content:
 
-* [CA APM 9.7 Documentation](https://wiki.ca.com/display/APMDEVOPS97/CA+Application+Performance+Management)
+* [CA APM Documentation](https://docops.ca.com/apm)
 * [CA Application Performance Mangement Product Homepage](http://www.ca.com/us/products/application-performance-management.aspx)
 
 ## CHANGELOG
@@ -38,6 +42,18 @@ Please review the
 **LICENSE**
 file in this repository.  Licenses may vary by repository.
 
-## RELEASES
 
-From time to time, projects may make releases available.  While source code is always available for complete build, releases serve as a tag and often contain prepared packages that are prebuilt and ready to use.  Visit `http://github.com/ca-apm/<repo_name>/releases` for details.
+## Support
+This document and associated tools are made available from CA Technologies as examples and provided at no charge as a courtesy to the CA APM Community at large. This resource may require modification for use in your environment. However, please note that this resource is not supported by CA Technologies, and inclusion in this site should not be construed to be an endorsement or recommendation by CA Technologies. These utilities are not covered by the CA Technologies software license agreement and there is no explicit or implied warranty from CA Technologies. They can be used and distributed freely amongst the CA APM Community, but not sold. As such, they are unsupported software, provided as is without warranty of any kind, express or implied, including but not limited to warranties of merchantability and fitness for a particular purpose. CA Technologies does not warrant that this resource will meet your requirements or that the operation of the resource will be uninterrupted or error free or that any defects will be corrected. The use of this resource implies that you understand and agree to the terms listed herein.
+
+Although these utilities are unsupported, please let us know if you have any problems or questions by adding a comment to the CA APM Community Site area where the resource is located, so that the Author(s) may attempt to address the issue or question.
+
+Unless explicitly stated otherwise this field pack is only supported on the same platforms as the APM core agent. See [APM Compatibility Guide](http://www.ca.com/us/support/ca-support-online/product-content/status/compatibility-matrix/application-performance-management-compatibility-guide.aspx).
+
+
+### Support URL
+https://github.com/CA-APM/ca-apm-fieldpack-mongodb/issues
+
+## Categories
+
+Big Data, Database

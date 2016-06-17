@@ -1,21 +1,21 @@
 # CA APM MONGODB COLLECTOR
 
 1. [DESCRIPTION](#description)
-1. [PLATFORMS, PREREQUISITES, AND DEPENDENCIES](#deps)
-1. [CHANGELOG](#changes)
-1. [INSTALLATION](#install)
-1. [CONFIGURATION](#config)
-1. [CONTRIBUTING AND DEVELOPMENT](#dev)
+1. [PLATFORMS, PREREQUISITES, AND DEPENDENCIES](#platforms-prerequisites-and-dependencies)
+1. [CHANGELOG](#changelog)
+1. [INSTALLATION](#installation)
+1. [CONFIGURATION](#configuration)
+1. [CONTRIBUTING AND DEVELOPMENT](#contributing-and-development)
 1. [LICENSE](#license)
 
-## <a name="description"></a>DESCRIPTION
+## DESCRIPTION
 The CA APM MongoDB Collector (hereafter Collector) extracts performance metrics from one or more MongoDB instances and send them to an APM Enterprise Manager via EPAgent.  It utilizes the RESTful API for EPAgent.
 
 In addition to the Collector program, this bundle also contains example dashboards for display of MongoDB metrics in CA APM.  Screenshots can be found on the [repo wiki](https://github.com/CA-APM/ca-apm-fieldpack-mongodb/wiki).
 
 The Collector can run on any machine (java enabled).  It makes client connections to configured MongoDB instances and retrieves all metrics available via [serverStatus](http://docs.mongodb.org/manual/reference/command/serverStatus/).  Metrics are then forwarded to a CA APM EPAgent via RESTful API.
 
-## <a name="deps"></a>PLATFORMS, PREREQUISITES, AND DEPENDENCIES
+## PLATFORMS, PREREQUISITES, AND DEPENDENCIES
 
 This extension requires the following:
 
@@ -29,13 +29,13 @@ This extension requires the following:
   
 - MongoDB versions supporting [serverStatus](http://docs.mongodb.org/manual/reference/command/serverStatus/) should work.  The Collector was built, tested, and certified against MongoDB v2.6.
  
-## <a name="changes"></a>CHANGELOG
+## CHANGELOG
 
 Please review the **CHANGELOG.md** file in this repository
 
-## <a name="install"></a>INSTALLATION
+## INSTALLATION
 
-Unzip ca-apm-fieldpack-mongodb-1.0.zip into a directory with suitable read/write access. [Configure](#config) your setup.
+Unzip ca-apm-fieldpack-mongodb-1.0.zip into a directory with suitable read/write access. [Configure](#configuration) your setup.
 
 ### Running the Collector
 
@@ -53,11 +53,11 @@ and a calculator on a CA APM Enterprise Manager. To install:
 * copy ./dashboard/MongoDB_MgtModule.jar <EM install path>/config/modules
 * copy ./dashboard/MongoDBMemoryLeak.js <EM install path>/scripts
 
-## <a name="config"></a>CONFIGURATION
+## CONFIGURATION
 
 All configuration of the Collector program is via property file -- **example.props** for details.
 
-##<a name="dev"></a>CONTRIBUTING AND DEVELOPMENT
+## CONTRIBUTING AND DEVELOPMENT
 
 If you plan to contribute changes, you need to read the **CONTRIBUTING.md** file in this repository for details on how to collaborate.
 
@@ -129,6 +129,6 @@ be viewed in `./target/site/jacoco-ut/index.html`
   * [LDAP Configuration](http://docs.mongodb.org/manual/tutorial/configure-ldap-sasl-openldap)
     * [CentOS Setup for Testing](http://www.itmanx.com/kb/centos6/install-openldap-phpldapadmin)
 
-## <a name="license"></a>LICENSE
+## LICENSE
 
 Please review the **LICENSE** file in this repository.
