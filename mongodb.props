@@ -4,7 +4,7 @@
 # ca-apm-fieldpack-mongodb collector will discover all of the other nodes 
 # and metrics will be reported for each mongo server.
 # This parameter is required.  There is no default value.
-mongo.hostname=localhost
+mongo.hostname=22.0.69.15
 
 # Port where mongo server is listening.  This parameter is required.
 # There is no default value.
@@ -17,21 +17,20 @@ mongo.port=27017
 
 # Mongo authentication type.  Must be one of:
 # - none: no authentication
-# - basic: use mongo basic authentication with MONGODB-CR.
-# - scram: use mongo basic authentication with SCRAM-SHA-1.
+# - basic: use mongo basic authentication
 # - plainsasl: use plainsasl (e.g., LDAP) authentication
 # - kerberos:
 #
 # This parameter is required.  There is no default value.
-mongo.auth=none
+mongo.auth=scram
 
 # The Mongo user name.  This parameter is required for all authentication
 # types other than "none"
-#mongo.user=<your-mongo-user>
+mongo.user=tom
 
 # The mongo password.  This parameter is required for "basic" and "plainsasl"
 # authentication.
-#mongo.pw=<your-mongo-password>
+mongo.pw=jerry
 
 # Data collection interval in seconds.  Value should be greater than 0.
 # If not, the ca-apm-fieldpack-mongodb collector will run only once and 
@@ -39,7 +38,7 @@ mongo.auth=none
 # Note that smaller interval values will result in increased load on
 # your mongo server(s).
 # This parameter is required.  There is no default value.
-mongo.interval.seconds=60
+mongo.interval.seconds=10
 
 # Hostname or IP address of APM API server.  This parameter is required.
 # There is no default value.
@@ -47,7 +46,6 @@ apm.apihost=localhost
 # Port for APM API server.  This parameter is required.
 # There is no default value.
 apm.apiport=8080
-
 #Logging properties
 #This program uses JDK Logging
 #Any JDK logging properties can be placed in this file.
