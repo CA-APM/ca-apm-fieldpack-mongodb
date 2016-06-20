@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <properties>
-      <mongo.driver.version>2.12.3</mongo.driver.version>
+      <mongo.driver.version>2.14.2</mongo.driver.version>
       <gson.version>2.2.4</gson.version>
       <maven.jar.version>2.4</maven.jar.version>
       <maven.surefire.version>2.12.4</maven.surefire.version>
@@ -14,7 +14,7 @@
     </properties>
     <groupId>com.ca.apm.mongo</groupId>
     <artifactId>ca-apm-fieldpack-mongodb</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
     <dependencies>
       <dependency>
