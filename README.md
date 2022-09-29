@@ -1,6 +1,8 @@
 
 # CA APM MONGODB COLLECTOR
 
+This collector is obsolete. Use [APM Infrastructure Agent for Mongo DBMonitoring](https://techdocs.broadcom.com/us/en/ca-enterprise-software/it-operations-management/application-performance-management/21-3/deploy-and-configure-dx-apm-agents/infrastructure-agent/MongoDB-Monitoring-Extension.html) instead.
+
 # Description
 The CA APM MongoDB Collector (hereafter Collector) extracts performance metrics from one or more MongoDB instances and send them to an APM Enterprise Manager via EPAgent.  It utilizes the RESTful API for EPAgent.
 
