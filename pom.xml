@@ -7,7 +7,7 @@
       <maven.jar.version>2.4</maven.jar.version>
       <maven.surefire.version>2.12.4</maven.surefire.version>
       <jacoco.version>0.7.1.201405082137</jacoco.version>
-      <testng.version>6.1.1</testng.version>
+      <testng.version>7.7.0</testng.version>
       <flapdoodle.version>1.46.0</flapdoodle.version>
       <json.version>1.0.4</json.version>
       <jadler.version>1.1.1</jadler.version>
